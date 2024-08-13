@@ -14,7 +14,7 @@ import Contacts from "./scenes/contacts";
 import Form from "./scenes/form";
 // import FAQ from "./scenes/faq";
 // import Geography from "./scenes/geography";
-// import Calender from "./scenes/calender";
+import Calendar from "./scenes/calender";
 
 // CssBaseline - reset css to default
 function App() {
@@ -76,10 +76,10 @@ function App() {
         //   path: "/geography",
         //   element: <Geography />,
         // },
-        // {
-        //   path: "/calender",
-        //   element: <Calender />,
-        // }
+        {
+          path: "/calendar",
+          element: <Calendar />,
+        },
       ],
     },
   ]);
