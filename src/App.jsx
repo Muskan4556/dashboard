@@ -12,7 +12,7 @@ import Contacts from "./scenes/contacts";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
 import Form from "./scenes/form";
-// import FAQ from "./scenes/faq";
+import FAQ from "./scenes/faq";
 // import Geography from "./scenes/geography";
 import Calendar from "./scenes/calender";
 
@@ -68,10 +68,10 @@ function App() {
           path: "/form",
           element: <Form />,
         },
-        // {
-        //   path: "/faq",
-        //   element: <FAQ />,
-        // },
+        {
+          path: "/faq",
+          element: <FAQ />,
+        },
         // {
         //   path: "/geography",
         //   element: <Geography />,

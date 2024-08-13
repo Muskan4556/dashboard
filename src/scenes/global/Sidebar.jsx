@@ -16,7 +16,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { useEffect, useState } from "react";
 import { tokens } from "../../theme";
-import userImg from "../../../public/assets/user.png";
+import userImg from "../../assets/user.png";
 import { useMediaQuery } from "@mui/material";
 
 // item Component
@@ -50,15 +50,14 @@ const SidebarC = () => {
   const [selected, setSelected] = useState("Dashboard");
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-    // Use effect to automatically collapse the sidebar if the screen width is greater than 600px
-    useEffect(() => {
-      if (isNonMobile) {
-        setIsCollapsed(false); // Set collapsed to true on non-mobile view
-      } else {
-        setIsCollapsed(true); // Set collapsed to false on mobile view
-      }
-    }, [isNonMobile]); // Dependency array
-  
+  // Use effect to automatically collapse the sidebar if the screen width is greater than 600px
+  useEffect(() => {
+    if (isNonMobile) {
+      setIsCollapsed(false); // Set collapsed to true on non-mobile view
+    } else {
+      setIsCollapsed(true); // Set collapsed to false on mobile view
+    }
+  }, [isNonMobile]); // Dependency array
 
   return (
     <Box
