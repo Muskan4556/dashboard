@@ -151,7 +151,7 @@ const SidebarC = () => {
             </Typography>
             <Item
               title="Manage Team"
-              to="/"
+              to="/teams"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
