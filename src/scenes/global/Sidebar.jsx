@@ -14,9 +14,10 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { tokens } from "../../theme";
 import userImg from "../../../public/assets/user.png";
+import { useMediaQuery } from "@mui/material";
 
 // item Component
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -25,19 +26,19 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <MenuItem
-      style={{
-        color: title === selected ? "#6870fa" : colors.grey[100],
-        textDecoration: "none !important",
-      }}
-      active={title === selected}
-      onClick={() => setSelected(title)}
-      icon={icon}
-    >
-      <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
+      <MenuItem
+        style={{
+          color: title === selected ? "#6870fa" : colors.grey[100],
+          textDecoration: "none !important",
+        }}
+        active={title === selected}
+        onClick={() => setSelected(title)}
+        icon={icon}
+      >
         <Typography>{title}</Typography>
-      </Link>
-    </MenuItem>
+      </MenuItem>
+    </Link>
   );
 };
 
@@ -47,6 +48,18 @@ const SidebarC = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  const isNonMobile = useMediaQuery("(min-width:600px)");
+
+    // Use effect to automatically collapse the sidebar if the screen width is greater than 600px
+    useEffect(() => {
+      if (isNonMobile) {
+        setIsCollapsed(false); // Set collapsed to true on non-mobile view
+      } else {
+        setIsCollapsed(true); // Set collapsed to false on mobile view
+      }
+    }, [isNonMobile]); // Dependency array
+  
+
   return (
     <Box
       sx={{

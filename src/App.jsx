@@ -11,7 +11,7 @@ import Contacts from "./scenes/contacts";
 // import Bar from "./scenes/bar";
 // import Line from "./scenes/line";
 // import Pie from "./scenes/pie";
-// import Form from "./scenes/form";
+import Form from "./scenes/form";
 // import FAQ from "./scenes/faq";
 // import Geography from "./scenes/geography";
 // import Calender from "./scenes/calender";
@@ -64,10 +64,10 @@ function App() {
         //   path: "/pie",
         //   element: <Pie />,
         // },
-        // {
-        //   path: "/form",
-        //   element: <Form />,
-        // },
+        {
+          path: "/form",
+          element: <Form />,
+        },
         // {
         //   path: "/faq",
         //   element: <FAQ />,
