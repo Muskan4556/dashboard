@@ -9,11 +9,11 @@ import Teams from "./scenes/teams";
 import Invoices from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
 import Bar from "./scenes/bar";
-// import Line from "./scenes/line";
+import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import Form from "./scenes/form";
 import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
+import Geography from "./scenes/geography";
 import Calendar from "./scenes/calender";
 
 // CssBaseline - reset css to default
@@ -56,10 +56,10 @@ function App() {
           path: "/bar",
           element: <Bar />,
         },
-        // {
-        //   path: "/line",
-        //   element: <Line />,
-        // },
+        {
+          path: "/line",
+          element: <Line />,
+        },
         {
           path: "/pie",
           element: <Pie />,
@@ -72,10 +72,10 @@ function App() {
           path: "/faq",
           element: <FAQ />,
         },
-        // {
-        //   path: "/geography",
-        //   element: <Geography />,
-        // },
+        {
+          path: "/geography",
+          element: <Geography />,
+        },
         {
           path: "/calendar",
           element: <Calendar />,
