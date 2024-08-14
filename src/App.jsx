@@ -60,10 +60,10 @@ function App() {
         //   path: "/line",
         //   element: <Line />,
         // },
-        // {
-        //   path: "/pie",
-        //   element: <Pie />,
-        // },
+        {
+          path: "/pie",
+          element: <Pie />,
+        },
         {
           path: "/form",
           element: <Form />,
