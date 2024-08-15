@@ -9,12 +9,12 @@ import Teams from "./scenes/teams";
 import Invoices from "./scenes/invoices";
 import Contacts from "./scenes/contacts";
 import Bar from "./scenes/bar";
-import Line from "./scenes/line";
 import Pie from "./scenes/pie";
 import Form from "./scenes/form";
 import FAQ from "./scenes/faq";
-import Geography from "./scenes/geography";
 import Calendar from "./scenes/calender";
+import Line from "./scenes/line/index";
+import Geography from "./scenes/geography/index";
 
 // CssBaseline - reset css to default
 function App() {
