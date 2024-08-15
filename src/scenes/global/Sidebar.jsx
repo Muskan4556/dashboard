@@ -64,7 +64,6 @@ const SidebarC = () => {
       sx={{
         "& .ps-sidebar-root": {
           border: "none",
-          height: "100vh",
         },
         "& .ps-sidebar-container": {
           background: `${colors.primary[400]} !important`,
