@@ -16,7 +16,6 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { useEffect, useState } from "react";
 import { tokens } from "../../theme";
-import userImg from "../../assets/user.png";
 import { useMediaQuery } from "@mui/material";
 
 // item Component
@@ -124,7 +123,7 @@ const SidebarC = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={userImg}
+                  src="https://img.freepik.com/premium-photo/young-smiling-woman-ann-avatar-3d-vector-people-character-illustration-cartoon-minimal-style_1240525-12968.jpg?w=740"
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -135,10 +134,10 @@ const SidebarC = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  Jane Doe
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  Admin
                 </Typography>
               </Box>
             </Box>
